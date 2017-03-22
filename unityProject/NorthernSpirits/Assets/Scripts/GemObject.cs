@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GemObject : MonoBehaviour {
 	//this class holds the data of gems
-	public int id{get;}
+	public int id{get;set;}
 	public int RegionNum{ get; set;}
 	public string Msg { get; set;}
 	public bool isCollected{ get; set;}
@@ -21,6 +21,7 @@ public class GemObject : MonoBehaviour {
 		Msg = msg;
 		isCollected = false;
 
+		return this;
 	}
 
 
@@ -34,5 +35,7 @@ public class GemObject : MonoBehaviour {
 		RegionNum = region;
 		Msg = null;
 		isCollected = false;
+
+		return this;
 	}
 }
