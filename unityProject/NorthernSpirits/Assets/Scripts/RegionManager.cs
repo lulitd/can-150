@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RegionManager : MonoBehaviour {
+	//singleton
+
 	//this class handles the region
-	public int regionNum;
+	public int regionNum;//ENUM
 	public Vector3[] GemPlacementList;
 
 	//list of total gems in this region
@@ -28,4 +30,8 @@ public class RegionManager : MonoBehaviour {
 
 		return collectedNum;
 	}
+
+	//funtion grab data from map manager
+
+	//function save data to map manager
 }
