@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2448b6a53d6c85a4e8c714d6bbae47f9
+guid: 87fc31405de3543219503fe859b876cb
 timeCreated: 1474832258
 licenseType: Store
 ModelImporter:
@@ -56,6 +56,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -66,7 +67,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
