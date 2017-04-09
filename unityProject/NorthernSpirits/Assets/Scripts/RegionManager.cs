@@ -35,3 +35,21 @@ public class RegionManager : MonoBehaviour {
 
 	//function save data to map manager
 }
+
+
+public enum RegionName
+{
+    ALBERTA,
+    BRITISH_COLUMBIA,
+    MANITOBA,
+    NEW_BRUNSWICK,
+    NEWFOUNDLAND_LABRADOR,
+    NORTHWEST_TERRITORIES,
+    NOVA_SCOTIA,
+    NUNAVUT,
+    ONTARIO,
+    PEI,
+    QUEBEC,
+    SASKATCHEWAN,
+    YUKON
+}

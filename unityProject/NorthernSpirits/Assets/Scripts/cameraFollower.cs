@@ -3,27 +3,37 @@ using System.Collections;
 
 public class cameraFollower : MonoBehaviour
 {
-
+    [Tooltip("Approximately the time it will take to reach the target.A smaller value will reach the target faster.")]
     public float smoothTime = 0.3F;
 
-    [SerializeField]
+    [SerializeField,Tooltip("The target that this camera will follow")]
     private Transform target;
 
-    [SerializeField]
+    [SerializeField, Tooltip(" Offset the camera's position")]
     private Vector3 offsetPosition;
 
-    [SerializeField]
-    private Space offsetPositionSpace = Space.Self;
+    [SerializeField, Tooltip(" Offset the camera's Rotation"),Range(-360f,360f)]
+    private float offsetRotationX;
+    [SerializeField, Tooltip(" Offset the camera's Rotation"), Range(-360f, 360f)]
+    private float offsetRotationY;
+    [SerializeField, Tooltip(" Offset the camera's Rotation"), Range(-360f, 360f)]
+    private float offsetRotationZ;
 
-    [SerializeField]
-    private bool lookAt = true;
+    [SerializeField,Tooltip("Is The offset position world or local space")]
+    private Space offsetPositionSpace = Space.Self;
+    
 
     new Transform transform; // caching transform
 
     private Vector3 velocity = Vector3.zero;
+    private Quaternion offsetRotation;
        
     private void Awake() {
-        transform = GetComponent<Transform>(); 
+        transform = GetComponent<Transform>();
+
+        if (target == null) target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        offsetRotation =Quaternion.Euler(offsetRotationX, offsetRotationY, offsetRotationZ);
     }
 
     // Late update occurs after fixedUpdate(physics stuff) 
@@ -42,24 +52,26 @@ public class cameraFollower : MonoBehaviour
         }
 
         // compute position
-        if (offsetPositionSpace == Space.Self)
-        {
-            transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(offsetPosition), ref velocity, smoothTime);
-            
-        }
-        else
-        {
-            transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(offsetPosition)+ offsetPosition, ref velocity, smoothTime);
-        }
+         if (offsetPositionSpace == Space.Self)
+         {
+             transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(offsetPosition), ref velocity, smoothTime);
 
-        // compute rotation
-        if (lookAt)
-        {
-            transform.LookAt(target);
-        }
-        else
-        {
-            transform.rotation = target.rotation;
-        }
+         }
+         else
+         {
+             transform.position = Vector3.SmoothDamp(transform.position, target.TransformPoint(offsetPosition)+ offsetPosition, ref velocity, smoothTime);
+         }
+
+
+        offsetRotation = Quaternion.Euler(offsetRotationX, offsetRotationY, offsetRotationZ);
+    
+            transform.LookAt(target.position);
+            transform.rotation*= offsetRotation ;
+
+       
+
+
+       
+       
     }
 }

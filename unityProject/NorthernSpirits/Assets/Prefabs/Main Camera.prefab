@@ -37,13 +37,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780058708336194}
-  m_LocalRotation: {x: 0.30070576, y: -0, z: -0, w: 0.953717}
-  m_LocalPosition: {x: 0, y: 8, z: -8}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 3, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!20 &20937344214983576
 Camera:
   m_ObjectHideFlags: 1
@@ -62,13 +62,13 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967039
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -103,11 +103,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36283f817b8090347b264860e0bd5f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.3
+  smoothTime: 0.1
   target: {fileID: 0}
-  offsetPosition: {x: 0, y: 8, z: -8}
+  offsetPosition: {x: 0, y: 5.17, z: -12.29}
+  offsetRotationX: -15
+  offsetRotationY: 0
+  offsetRotationZ: 0
   offsetPositionSpace: 1
-  lookAt: 1
 --- !u!124 &124262957883285198
 Behaviour:
   m_ObjectHideFlags: 1
