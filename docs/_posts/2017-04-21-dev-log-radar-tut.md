@@ -33,10 +33,9 @@ On each object that you would like to display in your radar (the player, cave en
 
 Make sure you rotate your sprites **90 degrees on the X-axis**. This will allow the sprites to be seen by the top-down camera that we will create for our radar.
 
+![SceneView]({{ site.url }}/images/posts/radar/3_radar-icons-scene-view.png)
+
 >Now you might be thinking, I can see the sprites in the game view, and it looks awful!
-
-
-![RadarSettings]({{ site.url }}/images/posts/radar/3_radar-icon-scene.png)
 
 Here come layers to the rescue! Layers control which objects can interact with which objects.  You can use layers to control which objects can collide with each other, control lighting and control which objects are visible to which camera.
 
@@ -44,6 +43,7 @@ Create a new layer, we’ve called our's **Radar**. And you’ve guessed it, cha
 
 Now that all the radar icons are on the same layer, we can tell our main camera not to render them.  Select your main camera and in the inspector in the drop down menu for **culling mask uncheck the radar layer**. And like magic, the sprites have vanished.
 
+![LayerMagic]({{ site.url}}/images/posts/radar/4_layers.gif)
 ----
 ## 2. The Radar camera
 
