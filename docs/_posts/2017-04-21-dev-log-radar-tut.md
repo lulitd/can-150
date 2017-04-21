@@ -44,10 +44,17 @@ Create a new layer, we’ve called our's **Radar**. And you’ve guessed it, cha
 Now that all the radar icons are on the same layer, we can tell our main camera not to render them.  Select your main camera and in the inspector in the drop down menu for **culling mask uncheck the radar layer**. And like magic, the sprites have vanished.
 
 ![LayerMagic]({{ site.url}}/images/posts/radar/4_layers.gif)
+![ResultsOfUsingLayers]({{ site.url}}/images/posts/radar/5_layer_result.png)
+
 ----
 ## 2. The Radar camera
 
 Create a new camera object (Radar camera). Rotate the camera **90 degrees on the x-axis** so it is looking downwards and **move it upwards(y-axis)**.
+
+
+<figure style="width: 300px" class="align-right">
+  <img src=" {site.url} images/posts/radar/6_camera_settings.png" alt="">
+</figure>
 
 **Camera settings:**
 * __Clear flags:__  Solid color
@@ -57,8 +64,8 @@ Create a new camera object (Radar camera). Rotate the camera **90 degrees on the
 * __Size:__ This will depend on the size of your game. Consider this the radius of your radar.
 
 Ok, great but it's not much of a radar if it doesn’t move with the player. In order to get it to respond to the player’s movements you could  
-1) Make the camera a child of the player game object or
-2) Create a script that moves the camera according to the player’s position.
+1. Make the camera a child of the player game object or
+2. Create a script that moves the camera according to the player’s position.
 
 We went for option 2 as we didn’t want the player’s rotation to affect the camera’s viewpoint and it gave us finer control( like movement smoothness).
 
