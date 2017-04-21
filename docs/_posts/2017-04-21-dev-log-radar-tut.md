@@ -24,6 +24,10 @@ For Northern Spirits, we’ve set up a simple radar/mini map system which allows
   <figcaption>A simple scene with a character and some spheres</figcaption>
 </figure>
 
+1. [Setting up the radar icons](#1-setting-up-the-radar-icons)
+2. [The Radar Camera](#2-the-radar-camera)
+3. [The Radar UI](#3-radar-ui)
+
 ----
 ## 1. Setting up the radar icons
 
@@ -128,7 +132,7 @@ public class CameraFollower2D : MonoBehaviour
 
 ----
 ## 3. Radar UI
-With the camera all setup we need to tell our camera to render to a texture in order to use it as part of the UI. **In your project window Create> Render texture.**  Assign this newly created render texture to your **radar camera’s target texture.
+With the camera all setup we need to tell our camera to render to a texture in order to use it as part of the UI. **In your project window Create> Render texture.**  Assign this newly created render texture to your **radar camera’s target texture**.
 
 ![renderTexture]({{ site.url}}/images/posts/radar/7_render_texture-min.png)
 
@@ -159,6 +163,6 @@ You’ll notice that some of the icons appear outside the radar circle. Select y
 
 ![maskedRadar]({{ site.url}}/images/posts/radar/13_mask-min.png)
 
-### Voila! You now have a simple radar system. 
+### Voila! You now have a simple radar system.
 
 ![result]({{ site.url}}/images/posts/radar/result-min.jpg)
