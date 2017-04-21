@@ -47,14 +47,12 @@ Now that all the radar icons are on the same layer, we can tell our main camera 
 ![ResultsOfUsingLayers]({{ site.url}}/images/posts/radar/5_layer_result.png)
 
 ----
+
 ## 2. The Radar camera
 
 Create a new camera object (Radar camera). Rotate the camera **90 degrees on the x-axis** so it is looking downwards and **move it upwards(y-axis)**.
 
-
-<figure style="width: 300px" class="align-right">
-  <img src=" {site.url} images/posts/radar/6_camera_settings.png" alt="">
-</figure>
+![radarCameraSettings]({{ site.url}]/images/posts/radar/6_camera_settings.png){: .align-right}
 
 **Camera settings:**
 * __Clear flags:__  Solid color
