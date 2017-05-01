@@ -12,6 +12,10 @@ public class moveTo : MonoBehaviour {
 	public Camera mainCam;
 	NavMeshAgent agent;
 
+	//particle related
+	public GameObject particle;
+	public float particleLifeTime;
+
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
 	}
@@ -40,6 +44,8 @@ public class moveTo : MonoBehaviour {
 				if (vHit.collider.gameObject.tag == "Ground") {
 					Debug.Log ("player move!!");
 					goal = vHit.point;
+					SpawnParticleEffect (goal);
+
 					agent.destination = goal;
 				}
 			}
@@ -60,6 +66,7 @@ public class moveTo : MonoBehaviour {
 					Debug.Log ("hit something!");
 					if ((hit.collider.gameObject.tag == "Ground")) {
 						goal = hit.point;
+						SpawnParticleEffect (goal);
 						agent.destination = goal;
 
 					}
@@ -68,6 +75,13 @@ public class moveTo : MonoBehaviour {
 			} 
 		} 
 
+	}
+
+	//function to spawn particle when click on ground
+	void SpawnParticleEffect(Vector3 position){
+		position.y = position.y + 0.01f;
+		GameObject newParticle = GameObject.Instantiate (particle, position, Quaternion.LookRotation(Vector3.up)) as GameObject;
+		Destroy (newParticle, particleLifeTime);
 	}
 
 }
