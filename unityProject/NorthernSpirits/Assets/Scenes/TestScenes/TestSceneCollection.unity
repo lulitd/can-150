@@ -529,6 +529,16 @@ Prefab:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 2043532399}
+    - target: {fileID: 114286662408961102, guid: 01365d39fb84c9a4fac313e3270c47d7,
+        type: 2}
+      propertyPath: particleLifeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286662408961102, guid: 01365d39fb84c9a4fac313e3270c47d7,
+        type: 2}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 150486, guid: 526c4229641a04e459198ae7e7778c74, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01365d39fb84c9a4fac313e3270c47d7, type: 2}
   m_IsPrefabParent: 0
