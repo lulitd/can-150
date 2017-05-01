@@ -4,13 +4,15 @@ using UnityEngine;
 using System;
 using System.Text.RegularExpressions;
 
+
+[System.Serializable]
 public class Gem : ScriptableObject {
 
     //this class holds the data of gems
     public int id;
     public RegionName Region;
     public string Msg;
-    public bool isCollected;
+    public bool isCollected = false;
 
 
     public void Load(string values) {
@@ -24,12 +26,17 @@ public class Gem : ScriptableObject {
         id = Convert.ToInt32(param[0]);
         // removes any quotes that were in the string. 
         Msg = param[2].Replace("\"", string.Empty);
-        
-        isCollected = false; 
+ 
+    }
 
+    public void collect()
+    {
+        isCollected = true;
 
+    }
 
-
+    public void reset() {
+        isCollected = false;
     }
 }
 
