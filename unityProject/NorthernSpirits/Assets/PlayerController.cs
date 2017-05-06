@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +16,7 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+#endif
 }
+

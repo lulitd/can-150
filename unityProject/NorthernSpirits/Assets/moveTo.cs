@@ -22,14 +22,14 @@ public class moveTo : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		#if UNITY_STANDALONE || UNITY_WEBPLAYER
+		#if UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
 		//call TryMove()
 		MouseMove();
 		#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
 		//call trymovetouch
 		TouchMove();
 		#endif
-		MouseMove ();
+		//MouseMove ();
 	}
 	void MouseMove(){
 		LeftClick = Input.GetMouseButtonDown (0);
