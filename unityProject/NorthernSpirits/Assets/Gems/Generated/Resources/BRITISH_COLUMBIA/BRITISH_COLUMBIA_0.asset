@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61a9c63aa9572a34387ce59379d43c5d, type: 3}
-  m_Name: BRITISH_COLUMBIA_1
+  m_Name: BRITISH_COLUMBIA_0
   m_EditorClassIdentifier: 
-  id: 1
+  id: -1
   Region: 1
   Msg: 1 2 3 4
   isCollected: 0

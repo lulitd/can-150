@@ -34,6 +34,9 @@ public class RegionSelectButton : MonoBehaviour {
         if (SceneListCheck.Has(Region.ToString()))
         {
 
+
+           // TODO add map manager
+
             SceneManager.LoadScene(Region.ToString());
 
         }

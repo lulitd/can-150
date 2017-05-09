@@ -33,7 +33,13 @@ public class SpawnManager : MonoBehaviour {
             return; 
 
         }
+
+        if (gemsData == null) return;
+
         for (int i = 0; i < gemsData.Length && i<spawnPoints.Length; i++) {
+
+
+            if (gemsData[i].isCollected) continue; // if its already been collected no need to spawn it. 
 
             // instantiate the gems. we will use the prefab rotation to insure the radar icon orientation is correct.
             // they will be parented to this object just to keep our hierachy organised. 

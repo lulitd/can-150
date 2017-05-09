@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 //this class handles the region
 public class RegionManager : MonoBehaviour {
@@ -11,11 +12,9 @@ public class RegionManager : MonoBehaviour {
     public static RegionManager instance = null;
 
 	public RegionName currentRegion;
-    public List<Gem> gemsCollected = new List<Gem>(); 
 
     //list of total gems in this region
     private  Gem[] regionGemList;
-    private  List<Gem> gemsUncollected =  new List<Gem>();
 
     // amount collected
     private int collectedNum;
@@ -40,7 +39,7 @@ public class RegionManager : MonoBehaviour {
     {
         setRegion(currentRegion);
         loadData();
-        SpawnManager.instance.spawnGems(gemsUncollected.ToArray());
+        SpawnManager.instance.spawnGems(regionGemList);
     }
 
 	public void setRegion(RegionName region){
@@ -72,40 +71,42 @@ public class RegionManager : MonoBehaviour {
 
     public int getNumCollected(){
 
-        collectedNum = gemsCollected.Count;
-
         return collectedNum;
 	}
 
     public void CollectGem(Gem gemCollected)
     {
-        gemsCollected.Add(gemCollected);
+        collectedNum++;
+        gemCollected.isCollected = true;
+
+        saveData();
+        SaveLoadManager.SavePlayerProgress();
+
     }
 
     public void loadData() {
 
-        for (int i=0; i<regionGemList.Length; i++) {
-            if (regionGemList[i].isCollected) gemsCollected.Add(regionGemList[i]);
-            else {
-                gemsUncollected.Add(regionGemList[i]);
-            }
+        bool[] isCollected = MapManager.instance.map[(int)currentRegion].collectionStatus;
+        for (int i=0; i<isCollected.Length; i++) {
+            regionGemList[i].isCollected = isCollected[i];
         }
 
+        // lamba expression goes through the array and counts how many are true;
+        collectedNum= isCollected.Count(gem => gem);
 
 
     }
     public void saveData()
     {
-        // as we are using scriptable objects 
-        // what ever changes we do to the object get saved automatically....
-        for (int i = 0; i < gemsCollected.Count; i++) {
-            gemsCollected[i].collect();
-        }
+
+        bool[] isCollected = new bool[regionGemList.Length];
+            for (int i = 0; i < regionGemList.Length; i++) {
+                isCollected[i] = regionGemList[i].isCollected;
+            }
+
+        MapManager.instance.map[(int)currentRegion].collectionStatus = isCollected;
     }
-
-    //funtion grab data from map manager
-
-    //function save data to map manager
+    
 }
 
 

@@ -8,10 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a9c63aa9572a34387ce59379d43c5d, type: 3}
-  m_Name: ALBERTA_3
+  m_Script: {fileID: 11500000, guid: e2fe47eebd944d64199d9b60b4514111, type: 3}
+  m_Name: RegionCount
   m_EditorClassIdentifier: 
-  id: 3
-  Region: 0
-  Msg: A, B, C, D, E, F
-  isCollected: 0
+  numberOfGems: 03000000010000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000

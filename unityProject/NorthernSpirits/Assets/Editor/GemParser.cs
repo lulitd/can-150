@@ -3,6 +3,7 @@ using UnityEditor;
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Text;
 
 public class GemParser : AssetPostprocessor
 {
@@ -47,6 +48,9 @@ public class GemParser : AssetPostprocessor
         // unity will complain if it attempts to create an asset in a folder doesn't exist.
         CheckOrCreateFolders();
 
+        FileCountObject count = ScriptableObject.CreateInstance<FileCountObject>();
+
+ 
         // now the magic! converting the rows of a csv to a scriptable object
         for (int i = 1; i < readText.Length; ++i)
         {
@@ -54,11 +58,24 @@ public class GemParser : AssetPostprocessor
             Gem gemData = ScriptableObject.CreateInstance<Gem>();
             gemData.Load(readText[i]); // send it the data
                                        // save each region in its own folder
-                             
+
+            int num = count.numberOfGems[(int)gemData.Region];
+
             string folderPath = filePath +"/"+ gemData.Region.ToString()+"/";
-            string fileName = string.Format("{0}{1}_{2}.asset", folderPath, gemData.Region.ToString(), gemData.id); 
+          
+            string fileName = string.Format("{0}{1}_{2}.asset", folderPath, gemData.Region.ToString(), num);
+
+            num++;
+
+            count.numberOfGems[(int)gemData.Region] = num;
+
             AssetDatabase.CreateAsset(gemData, fileName); // save the scriptable object as an asset. 
-        } 
+        }
+        
+
+      AssetDatabase.CreateAsset(count,filePath +"/RegionCount.asset");
+
+    
     }
 
 

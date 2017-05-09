@@ -1,7 +1,7 @@
-ID,RegionName,Message
-1,ALBERTA,"A, B"
-1,BRITISH_COLUMBIA,1 2 3 4
-1,PEI,"ok alright something"
-1,ONTARIO,"O Canada,our home and native land, God keep our land, Glorious and Free"
-2,ALBERTA,"A, B, C"
-3,ALBERTA,"A, B, C, D, E, F"
+RegionName,Message
+ALBERTA,"A, B"
+BRITISH_COLUMBIA,1 2 3 4
+PEI,"ok alright something"
+ONTARIO,"O Canada,our home and native land, God keep our land, Glorious and Free"
+ALBERTA,"A, B, C"
+ALBERTA,"A, B, C, D, E"
