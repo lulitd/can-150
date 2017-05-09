@@ -1186,27 +1186,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 5.18
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -8
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.2588191
+      value: 0.24141127
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.012838635
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.0031941538
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 0.97033274
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_RootOrder
@@ -1230,6 +1230,16 @@ Prefab:
         type: 2}
       propertyPath: offsetPosition.z
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 20937344214983576, guid: 62dbf7d29626560408028ed48c47d3e4,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20937344214983576, guid: 62dbf7d29626560408028ed48c47d3e4,
+        type: 2}
+      propertyPath: far clip plane
+      value: 5000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
@@ -10676,6 +10686,11 @@ Prefab:
     - target: {fileID: 114827794560400922, guid: 5d39cfce0e4180342ace269ac77afaea,
         type: 2}
       propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 2129429375}
+    - target: {fileID: 114947553817768200, guid: 5d39cfce0e4180342ace269ac77afaea,
+        type: 2}
+      propertyPath: m_DefaultCamera
       value: 
       objectReference: {fileID: 2129429375}
     m_RemovedComponents: []
