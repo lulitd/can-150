@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
-
+using UnityEngine.UI;
 //this class handles the region
 public class RegionManager : MonoBehaviour {
     
@@ -16,8 +16,14 @@ public class RegionManager : MonoBehaviour {
     //list of total gems in this region
     private  Gem[] regionGemList;
 
+    //list of total gems in this region
+    private ItemSlot[] inventory;
+
     // amount collected
     private int collectedNum;
+
+    public GameObject UIPanel;
+    public GameObject InventorySlotPrefab;
 
     public void Awake() {
 
@@ -66,8 +72,31 @@ public class RegionManager : MonoBehaviour {
 
         Debug.LogFormat("Region set to {0}. Contains {1} gems",currentRegion,regionGemList.Length);
 
+        PrepUI();
     }
 
+    public void PrepUI()
+    {
+        if (!UIPanel) return;
+
+        inventory = new ItemSlot[regionGemList.Length];
+        for (int i=0; i<regionGemList.Length; i++)
+        {
+            GameObject itemSlot = Instantiate(InventorySlotPrefab, UIPanel.transform) ;
+
+            regionGemList[i].setID(i);
+
+            ItemSlot slot = itemSlot.GetComponent<ItemSlot>();
+
+            if (slot)
+            {
+                slot.updateInventory(regionGemList[i]);
+
+                inventory[i] = slot;
+            }
+        }
+       
+    }
 
     public int getNumCollected(){
 
@@ -79,6 +108,7 @@ public class RegionManager : MonoBehaviour {
         collectedNum++;
         gemCollected.isCollected = true;
 
+        inventory[gemCollected.id].updateInventory(gemCollected);
         saveData();
         SaveLoadManager.SavePlayerProgress();
 
