@@ -6,11 +6,9 @@ namespace MalbersAnimations
     public class SleepBehavior : StateMachineBehaviour
     {
 
-       // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state 
-       // [Header("and move to the next animation Clip ")]
-       // [Header("This will count every Cycle ")]
-
-        [HelpBox("This will count every Cycle and move to the next animation Clip ")]
+        // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state 
+        // [Header("and move to the next animation Clip ")]
+        // [Header("This will count every Cycle ")]
 
         public bool CyclesFromController;
 

@@ -10,7 +10,6 @@ namespace MalbersAnimations
     /// </summary>
     public class ScaleBonesFix : MonoBehaviour
     {
-        [HelpBox("This is used to correct Seat/Death/Sleep Animations when the Legs are Scaled")]
         public Transform fixGameObject;
         public Vector3 Offset;
         public float duration;

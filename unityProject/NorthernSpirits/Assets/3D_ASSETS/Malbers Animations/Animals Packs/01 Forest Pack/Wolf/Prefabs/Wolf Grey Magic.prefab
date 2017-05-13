@@ -1371,11 +1371,7 @@ MonoBehaviour:
   multiplier: 0.71
   debug: 0
   debugSize: 0.03
-  DebugColor:
-    r: 0
-    g: 0.66896534
-    b: 1
-    a: 1
+  DebugColor: {r: 0, g: 0.66896534, b: 1, a: 1}
   drawRay: 1
 --- !u!114 &114000010590223058
 MonoBehaviour:
@@ -1389,7 +1385,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalTypeID: 0
-  GroundLayer: {}
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 1
   StartSpeed: 2
   height: 0.57
   WalkSpeed: 0
@@ -1414,23 +1412,28 @@ MonoBehaviour:
   OnGetDamaged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnKilled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnJump:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnFall:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnAttack:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   ShowEventsEditor: 0
 --- !u!114 &114000011350839916
 MonoBehaviour:
@@ -1444,7 +1447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToggleMeshes:
-  - Name: 4d61676963
+  - Name: Magic
     meshes:
     - {fileID: 0}
     - {fileID: 4000012433737172}
@@ -1477,11 +1480,7 @@ MonoBehaviour:
   multiplier: 0.9
   debug: 0
   debugSize: 0.03
-  DebugColor:
-    r: 1
-    g: 1
-    b: 0
-    a: 0.372
+  DebugColor: {r: 1, g: 1, b: 0, a: 0.372}
   drawRay: 1
 --- !u!114 &114000012892504890
 MonoBehaviour:
@@ -1498,11 +1497,7 @@ MonoBehaviour:
   multiplier: 1
   debug: 0
   debugSize: 0.03
-  DebugColor:
-    r: 1
-    g: 1
-    b: 0
-    a: 0.372
+  DebugColor: {r: 1, g: 1, b: 0, a: 0.372}
   drawRay: 1
 --- !u!114 &114000014081255832
 MonoBehaviour:
@@ -1517,57 +1512,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs:
   - active: 1
-    name: 4a756d70
+    name: Jump
     type: 0
-    input: 4a756d70
+    input: Jump
     key: 0
     GetPressed: 0
   - active: 1
-    name: 5368696674
+    name: Shift
     type: 0
-    input: 4669726533
+    input: Fire3
     key: 0
     GetPressed: 0
   - active: 1
-    name: 41747461636b31
+    name: Attack1
     type: 0
-    input: 4669726531
+    input: Fire1
     key: 0
     GetPressed: 1
   - active: 1
-    name: 537065656431
+    name: Speed1
     type: 1
-    input: 56616c7565
+    input: Value
     key: 49
     GetPressed: 0
   - active: 1
-    name: 537065656432
+    name: Speed2
     type: 1
-    input: 56616c7565
+    input: Value
     key: 50
     GetPressed: 0
   - active: 1
-    name: 537065656433
+    name: Speed3
     type: 1
-    input: 56616c7565
+    input: Value
     key: 51
     GetPressed: 0
   - active: 1
-    name: 416374696f6e
+    name: Action
     type: 1
-    input: 56616c7565
+    input: Value
     key: 101
     GetPressed: 1
   - active: 1
-    name: 5374756e
+    name: Stun
     type: 1
-    input: 56616c7565
+    input: Value
     key: 104
     GetPressed: 0
   - active: 0
-    name: 4465617468
+    name: Death
     type: 1
-    input: 56616c7565
+    input: Value
     key: 107
     GetPressed: 1
   cameraBaseInput: 0

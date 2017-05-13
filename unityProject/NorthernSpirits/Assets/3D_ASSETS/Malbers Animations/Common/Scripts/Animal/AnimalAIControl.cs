@@ -14,7 +14,6 @@ namespace MalbersAnimations
         protected Animal animal;                    //The Animal Script
         #endregion
 
-        [HelpBox("Basic Example on how to use Animal script and NavMesh Agents")]
         public Transform target;                    //The Target
 
         [Header("Distance for changing speed to")]

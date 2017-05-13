@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StepAudio: {fileID: 0}
+  volume: 1
 --- !u!135 &135000012568811192
 SphereCollider:
   m_ObjectHideFlags: 1

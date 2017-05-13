@@ -15,7 +15,6 @@ namespace MalbersAnimations
             FixedUpdate,                                            // Update in FixedUpdate (for tracking rigidbodies).
             LateUpdate,                                             // Update in LateUpdate. (for tracking objects that are moved in Update)
         }
-        [HelpBox("Modified Free Camera Rig prefab from the Standard Assets")]
         public Transform m_Target;                                  // The target object to follow
         public UpdateType m_UpdateType;                             // stores the selected update type
 

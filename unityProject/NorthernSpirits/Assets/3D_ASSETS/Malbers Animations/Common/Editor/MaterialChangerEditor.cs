@@ -43,19 +43,20 @@ namespace MalbersAnimations.Utilities
 
                 element.Name = EditorGUI.TextField(R_1, element.Name, EditorStyles.label);
             string buttonCap = "None";
+
             if (element.mesh != null)
             {
                 EditorGUI.BeginDisabledGroup(!element.mesh.gameObject.activeSelf || element.materials.Length ==0);
 
-                if (element.materials.Length>element.current)
-                {
-                    buttonCap = element.mesh.gameObject.activeSelf ? element.materials[element.current].name : "Is Hidden";
-                }
+                    if (element.materials.Length > element.current)
+                    {
+                        buttonCap = element.mesh.gameObject.activeSelf ? (element.materials[element.current] == null ? "None" : element.materials[element.current].name) : "Is Hidden";
+                    }
 
-                if (GUI.Button(R_2, buttonCap, EditorStyles.miniButton))
-                {
-                    ToggleButton(index);
-                }
+                    if (GUI.Button(R_2, buttonCap, EditorStyles.miniButton))
+                    {
+                        ToggleButton(index);
+                    }
                 EditorGUI.EndDisabledGroup();
             }
         }

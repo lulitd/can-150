@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0760d49a965145a91f4deebab02e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 4944496e74
+  Parameter: IDInt
   Range: 10
 --- !u!114 &11408094
 MonoBehaviour:
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0760d49a965145a91f4deebab02e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 4944496e74
+  Parameter: IDInt
   Range: 0
 --- !u!114 &11411150
 MonoBehaviour:
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0760d49a965145a91f4deebab02e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 4944496e74
+  Parameter: IDInt
   Range: 2
 --- !u!114 &11420284
 MonoBehaviour:
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0760d49a965145a91f4deebab02e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 4944496e74
+  Parameter: IDInt
   Range: 4
 --- !u!114 &11468668
 MonoBehaviour:
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0760d49a965145a91f4deebab02e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 4944496e74
+  Parameter: IDInt
   Range: 2
 --- !u!114 &11482984
 MonoBehaviour:
@@ -3831,8 +3831,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 110193754}
   - {fileID: 110126482}
-  m_StateMachineBehaviours:
-  - {fileID: 114000013549230122}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4525,7 +4524,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 110155520}
   m_StateMachineBehaviours:
-  - {fileID: 114000013658458800}
+  - {fileID: 114000010606810280}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4857,7 +4856,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 110178246}
   m_StateMachineBehaviours:
-  - {fileID: 114000010637244704}
+  - {fileID: 114000010208093060}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -5692,9 +5691,6 @@ AnimatorStateMachine:
   - {fileID: 110979786}
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110703742}
-      second: []
-    data:
       first: {fileID: 110743868}
       second: []
     data:
@@ -5704,6 +5700,9 @@ AnimatorStateMachine:
       - {fileID: 110956508}
       - {fileID: 110968886}
       - {fileID: 110991308}
+    data:
+      first: {fileID: 110703742}
+      second: []
     data:
       first: {fileID: 110789220}
       second: []
@@ -6441,7 +6440,7 @@ AnimatorTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 1
---- !u!114 &114000010637244704
+--- !u!114 &114000010208093060
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -6449,11 +6448,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1efc2e1fc0e7045851c1c4d985074f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3eb6370f117296d4e96457a42599ab27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 1
-  exit: 1
+  PosX: 1
+  PosY: 1
+  PosZ: 1
+  RotX: 1
+  RotY: 1
+  RotZ: 1
+  OnEnter: 0
+  OnExit: 1
+--- !u!114 &114000010606810280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb6370f117296d4e96457a42599ab27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosX: 0
+  PosY: 1
+  PosZ: 0
+  RotX: 1
+  RotY: 1
+  RotZ: 1
+  OnEnter: 0
+  OnExit: 1
 --- !u!114 &114000011129072222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6496,8 +6520,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e86c0f2fb85e944a87bd2ace4945cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseSendMessage: 0
   onEnterMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 1
     intValue: 0
@@ -6506,7 +6531,7 @@ MonoBehaviour:
     time: 0
     sent: 0
   onExitMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 0
     intValue: 0
@@ -6632,8 +6657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e86c0f2fb85e944a87bd2ace4945cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseSendMessage: 0
   onEnterMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 1
     intValue: 0
@@ -6642,7 +6668,7 @@ MonoBehaviour:
     time: 0
     sent: 0
   onExitMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 0
     intValue: 0
@@ -6679,7 +6705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0760d49a965145a91f4deebab02e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Parameter: 4944496e74
+  Parameter: IDInt
   Range: 2
 --- !u!114 &114000012973735968
 MonoBehaviour:
@@ -6692,8 +6718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e86c0f2fb85e944a87bd2ace4945cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseSendMessage: 0
   onEnterMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 1
     intValue: 0
@@ -6702,7 +6729,7 @@ MonoBehaviour:
     time: 0
     sent: 0
   onExitMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 0
     intValue: 0
@@ -6765,32 +6792,6 @@ MonoBehaviour:
   RotZ: 1
   OnEnter: 0
   OnExit: 1
---- !u!114 &114000013549230122
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1efc2e1fc0e7045851c1c4d985074f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enter: 1
-  exit: 1
---- !u!114 &114000013658458800
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e1efc2e1fc0e7045851c1c4d985074f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enter: 1
-  exit: 1
 --- !u!114 &114000014041967100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6802,8 +6803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e86c0f2fb85e944a87bd2ace4945cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UseSendMessage: 0
   onEnterMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 1
     intValue: 0
@@ -6812,7 +6814,7 @@ MonoBehaviour:
     time: 0
     sent: 0
   onExitMessage:
-  - message: 41747461636b696e67
+  - message: Attacking
     typeM: 0
     boolValue: 0
     intValue: 0

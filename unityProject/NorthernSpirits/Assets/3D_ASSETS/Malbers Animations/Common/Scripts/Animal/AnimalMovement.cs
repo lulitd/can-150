@@ -419,7 +419,7 @@ namespace MalbersAnimations
                 stand = false;
             else stand = true;
 
-            if (jump || damaged || stun || fall || /*swim ||*/ fly || isInAir || tired >= GotoSleep)   stand = false; //Stand False when doing some action
+            if (jump || damaged || stun || fall || swim || fly || isInAir || tired >= GotoSleep)   stand = false; //Stand False when doing some action
                
             if (tired >= GotoSleep) tired = 0;          //Reset Time Out
         }

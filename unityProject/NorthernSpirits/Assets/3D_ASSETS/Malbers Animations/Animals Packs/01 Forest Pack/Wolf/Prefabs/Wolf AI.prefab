@@ -1340,11 +1340,7 @@ MonoBehaviour:
   multiplier: 0.9
   debug: 0
   debugSize: 0.03
-  DebugColor:
-    r: 1
-    g: 1
-    b: 0
-    a: 0.372
+  DebugColor: {r: 1, g: 1, b: 0, a: 0.372}
   drawRay: 1
 --- !u!114 &114000011889971886
 MonoBehaviour:
@@ -1361,11 +1357,7 @@ MonoBehaviour:
   multiplier: 1
   debug: 0
   debugSize: 0.03
-  DebugColor:
-    r: 1
-    g: 1
-    b: 0
-    a: 0.372
+  DebugColor: {r: 1, g: 1, b: 0, a: 0.372}
   drawRay: 1
 --- !u!114 &114000012220086954
 MonoBehaviour:
@@ -1396,11 +1388,7 @@ MonoBehaviour:
   multiplier: 0.71
   debug: 0
   debugSize: 0.03
-  DebugColor:
-    r: 0
-    g: 0.66896534
-    b: 1
-    a: 1
+  DebugColor: {r: 0, g: 0.66896534, b: 1, a: 1}
   drawRay: 1
 --- !u!114 &114000013977020698
 MonoBehaviour:
@@ -1414,7 +1402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalTypeID: 0
-  GroundLayer: {}
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 1
   StartSpeed: 2
   height: 0.57
   WalkSpeed: 0
@@ -1439,23 +1429,28 @@ MonoBehaviour:
   OnGetDamaged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnKilled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnJump:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnFall:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   OnAttack:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 556e697479456e67696e652e4576656e74732e556e6974794576656e742c20556e697479456e67696e652c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   ShowEventsEditor: 0
 --- !u!136 &136000012241232538
 CapsuleCollider:

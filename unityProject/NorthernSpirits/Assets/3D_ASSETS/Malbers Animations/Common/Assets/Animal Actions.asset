@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Animal Actions
   m_EditorClassIdentifier: 
   actions:
-  - name: 456174
+  - name: Eat
     ID: 2
-  - name: 4472696e6b
+  - name: Drink
     ID: 7
-  - name: 536c656570
+  - name: Sleep
     ID: 6
-  - name: 446967
+  - name: Dig
     ID: 8
