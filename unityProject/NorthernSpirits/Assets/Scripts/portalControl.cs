@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class portalControl : MonoBehaviour {
 
 	public RegionName teleportRegion;
+	public bool lockPortal;
+	private bool isThisLocked = false;
 	// Use this for initialization
 	void Start () {
 		

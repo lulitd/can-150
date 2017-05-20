@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/MenuScene.unity
   - enabled: 1
     path: Assets/Scenes/MainScenes/QUEBEC.unity
+  - enabled: 1
+    path: Assets/Scenes/Cave.unity
