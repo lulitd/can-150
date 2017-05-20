@@ -9,7 +9,7 @@ public class moveTo : MonoBehaviour {
 
 	bool LeftClick;
 	Vector3 mousePos;
-	public Camera mainCam;
+	private Camera mainCam;
 	NavMeshAgent agent;
 
 	//particle related
@@ -18,6 +18,7 @@ public class moveTo : MonoBehaviour {
 
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
+		mainCam = Camera.main;
 	}
 
 	// Update is called once per frame
