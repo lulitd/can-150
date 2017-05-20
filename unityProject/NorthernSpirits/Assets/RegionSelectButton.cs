@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class RegionSelectButton : MonoBehaviour {
 
-
     // covert all to single scriptable object?
     public RegionName Region;
     public Sprite regionImage;
@@ -14,16 +13,24 @@ public class RegionSelectButton : MonoBehaviour {
     public GameObject RegionDisplay;
     public Text regionLabel;
     public Text regionStats;
-    public Image imageLabel; 
+    public Image imageLabel;
+    private Button button; 
+    private string regionString;
 
 
-    void Awake() {
+    void Awake()
+    {
         gameObject.name = "Gem_" + Region.ToString();
+        regionString = Region.ToString();
+
+        button = GetComponent<Button>();
+        button.interactable = SceneListCheck.Has(regionString);
+   
     }
 
     public void DisplayRegionInfo() {
 
-        regionLabel.text = Region.ToString();
+        regionLabel.text = regionString;
 
         RegionDisplay.SetActive(true);
 
@@ -31,18 +38,18 @@ public class RegionSelectButton : MonoBehaviour {
 
     public void LoadRegionScene() {
 
-        if (SceneListCheck.Has(Region.ToString()))
+        if (SceneListCheck.Has(regionString))
         {
 
 
            // TODO add map manager
 
-            SceneManager.LoadScene(Region.ToString());
+            SceneManager.LoadScene(regionString);
 
         }
         else {
 
-            Debug.LogWarningFormat("Scene {0} does not exist. Please check build settings", Region.ToString());
+            Debug.LogWarningFormat("Scene {0} does not exist. Please check build settings", regionString);
 
         }
         

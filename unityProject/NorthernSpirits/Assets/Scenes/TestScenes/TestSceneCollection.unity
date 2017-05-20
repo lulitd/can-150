@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: []
-  resetOnLaunch: 1
+  resetOnLaunch: 0
 --- !u!4 &1316140872 stripped
 Transform:
   m_PrefabParentObject: {fileID: 441004, guid: c024bccef9207734fad86e7fb00f831d, type: 2}
@@ -1527,19 +1527,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.24163261
+      value: 0.24183102
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.014240699
+      value: 0.014213407
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.0035465008
+      value: -0.0035427904
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.97025687
+      value: 0.9702078
       objectReference: {fileID: 0}
     - target: {fileID: 4018768866857978, guid: 62dbf7d29626560408028ed48c47d3e4, type: 2}
       propertyPath: m_RootOrder

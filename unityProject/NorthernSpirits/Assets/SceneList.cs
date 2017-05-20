@@ -2,6 +2,8 @@
 
 public enum Scenes 
 {
-	TestScene_Movement = 0
+	TestScene_Movement = 0,
+	MenuScene = 1,
+	QUEBEC = 2
 }
 
