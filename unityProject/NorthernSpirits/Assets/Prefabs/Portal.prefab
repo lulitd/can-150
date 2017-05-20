@@ -74,8 +74,9 @@ GameObject:
   - component: {fileID: 65712609323446964}
   - component: {fileID: 23670342832524184}
   - component: {fileID: 114585194705124656}
+  - component: {fileID: 114585523417064144}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: PortalControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1278010239012720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.3745437, y: 0.3343224, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4842844414955924}
@@ -262,6 +263,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportRegion: 7
+--- !u!114 &114585523417064144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683944260887554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dc539cb5e7b46009eaaa2ba260dcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportRegion: 10
 --- !u!198 &198341156662566484
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -317,7 +330,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 23433244
+  randomSeed: 1681711098
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2918,7 +2931,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 273934640
+  randomSeed: -589328680
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5459,7 +5472,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -789973611
+  randomSeed: -1807003822
   InitialModule:
     serializedVersion: 3
     enabled: 1

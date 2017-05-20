@@ -15233,33 +15233,6 @@ Prefab:
       propertyPath: m_Name
       value: Quebec
       objectReference: {fileID: 0}
-    - target: {fileID: 198905048363899650, guid: fae7698a403e646488b684382404e2ef,
-        type: 2}
-      propertyPath: randomSeed
-      value: -44211274
-      objectReference: {fileID: 0}
-    - target: {fileID: 198513135343719970, guid: fae7698a403e646488b684382404e2ef,
-        type: 2}
-      propertyPath: randomSeed
-      value: -644729216
-      objectReference: {fileID: 0}
-    - target: {fileID: 198341156662566484, guid: fae7698a403e646488b684382404e2ef,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1824042219
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104510233489158, guid: fae7698a403e646488b684382404e2ef, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104510233489158, guid: fae7698a403e646488b684382404e2ef, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104510233489158, guid: fae7698a403e646488b684382404e2ef, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fae7698a403e646488b684382404e2ef, type: 2}
   m_IsPrefabParent: 0
@@ -15268,23 +15241,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4104510233489158, guid: fae7698a403e646488b684382404e2ef,
     type: 2}
   m_PrefabInternal: {fileID: 1879575810}
---- !u!1 &1879575812 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1683944260887554, guid: fae7698a403e646488b684382404e2ef,
-    type: 2}
-  m_PrefabInternal: {fileID: 1879575810}
---- !u!114 &1879575813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1879575812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62dc539cb5e7b46009eaaa2ba260dcfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportRegion: 10
 --- !u!4 &1880866214 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010403803548, guid: 254c5bb9a47393244ada5245eeafbd2a,
@@ -16301,7 +16257,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2050071956}
-  m_LocalRotation: {x: 0.24175109, y: 0.011288886, z: -0.0028127274, w: 0.97026855}
+  m_LocalRotation: {x: 0.24175204, y: 0.011269826, z: -0.002807989, w: 0.9702686}
   m_LocalPosition: {x: -0.6, y: -0.3518381, z: -1.3999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
