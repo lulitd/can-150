@@ -116,7 +116,7 @@ public class RegionManager : MonoBehaviour {
 
     public void loadData() {
 
-        bool[] isCollected = MapManager.instance.map[(int)currentRegion].collectionStatus;
+        bool[] isCollected = MapManager.instance.getCollectionStatus(currentRegion);
         for (int i=0; i<isCollected.Length; i++) {
             regionGemList[i].isCollected = isCollected[i];
         }
@@ -134,7 +134,9 @@ public class RegionManager : MonoBehaviour {
                 isCollected[i] = regionGemList[i].isCollected;
             }
 
-        MapManager.instance.map[(int)currentRegion].collectionStatus = isCollected;
+        MapManager.instance.setCollectionStatus(currentRegion,isCollected);
+
+        MapManager.instance.setRegionUnlockStatus(currentRegion, collectedNum == isCollected.Length) ;
     }
     
 }

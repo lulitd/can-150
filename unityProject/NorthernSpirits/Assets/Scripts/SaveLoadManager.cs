@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-
+using System.Linq;
 
 public static class SaveLoadManager {
 
@@ -11,7 +11,7 @@ public static class SaveLoadManager {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream stream = new FileStream(Application.persistentDataPath + "/player.sav", FileMode.Create);
 
-        MapData map = new MapData(MapManager.instance.map);
+        MapData map = new MapData(MapManager.instance.getMap());
         bf.Serialize(stream,map);
         stream.Close();
     }
@@ -68,20 +68,26 @@ public class RegionData
 {
     public bool[] collectionStatus;
     public RegionName name;
-    public int numberOfGems;
+    public int totalNumberOfGems;
+    public int numberOfGemsCollected;
+    public bool isRegionLocked;
 
 
     public RegionData(RegionName _name, bool[] _collectionStatus) {
         collectionStatus = _collectionStatus;
         name = _name;
-        numberOfGems = _collectionStatus.Length;
+        totalNumberOfGems = _collectionStatus.Length;
+        // lamba expression goes through the array and counts how many are true;
+        numberOfGemsCollected = _collectionStatus.Count(gem => gem);
+        isRegionLocked = totalNumberOfGems == numberOfGemsCollected;
     }
 
     public RegionData(RegionName _name, int num = 1) {
         name = _name;
-        numberOfGems = num;
+        totalNumberOfGems = num;
         collectionStatus = new bool[num];
-
+        isRegionLocked = false;
+        numberOfGemsCollected = 0; 
     }
 }
 
