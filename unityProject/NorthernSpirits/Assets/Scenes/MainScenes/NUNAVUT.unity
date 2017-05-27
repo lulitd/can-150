@@ -477,7 +477,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 434964010}
-  m_LocalRotation: {x: 0.24183345, y: 0.01580159, z: -0.003938803, w: 0.9701811}
+  m_LocalRotation: {x: 0.24168833, y: 0.020227872, z: -0.005039366, w: 0.97013}
   m_LocalPosition: {x: 465.1, y: 28, z: 395.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -639,6 +639,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71c3890e51327c74eb2088c01b7b1a4f, type: 2}
   m_IsPrefabParent: 0
+--- !u!134 &646283626
+PhysicMaterial:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Default (Instance) (Instance) (Instance) (Instance)
+  dynamicFriction: 0.6
+  staticFriction: 0.6
+  bounciness: 0
+  frictionCombine: 0
+  bounceCombine: 0
 --- !u!1001 &670926787
 Prefab:
   m_ObjectHideFlags: 0
@@ -793,17 +804,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71c3890e51327c74eb2088c01b7b1a4f, type: 2}
   m_IsPrefabParent: 0
---- !u!134 &808113622
-PhysicMaterial:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Default (Instance) (Instance) (Instance)
-  dynamicFriction: 0.6
-  staticFriction: 0.6
-  bounciness: 0
-  frictionCombine: 0
-  bounceCombine: 0
 --- !u!1001 &823074584
 Prefab:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,7 @@ TerrainCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 852324316}
-  m_Material: {fileID: 808113622}
+  m_Material: {fileID: 646283626}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 52959784e277a4c769b47beee944bb75, type: 2}
   m_EnableTreeColliders: 1
@@ -1700,7 +1700,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013685405068, guid: 30303e581906b1e498bfb3bf866e8ed6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.3822026
+      value: 56.9
       objectReference: {fileID: 0}
     - target: {fileID: 4000013685405068, guid: 30303e581906b1e498bfb3bf866e8ed6, type: 2}
       propertyPath: m_LocalPosition.z
