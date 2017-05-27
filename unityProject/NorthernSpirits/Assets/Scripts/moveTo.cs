@@ -16,6 +16,9 @@ public class moveTo : MonoBehaviour {
 	public GameObject particle;
 	public float particleLifeTime;
 
+	//animator controller
+	public Animator ani;
+
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
 		mainCam = Camera.main;
