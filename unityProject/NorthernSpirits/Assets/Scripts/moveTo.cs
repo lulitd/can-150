@@ -35,14 +35,20 @@ public class moveTo : MonoBehaviour {
 	void MouseMove(){
 		LeftClick = Input.GetMouseButtonDown (0);
 
-		if (LeftClick) {
-			mousePos = Input.mousePosition;
+
+
+        if (LeftClick) {
+
+
+            mousePos = Input.mousePosition;
 			//do raycast
 			RaycastHit vHit;
 			Ray vRay = mainCam.ScreenPointToRay (mousePos);
 
 			if (Physics.Raycast (vRay, out vHit)) {
-				if (vHit.collider.gameObject.tag == "Ground") {
+                
+                // use compare tag. more optimised than ==
+                if (vHit.collider.CompareTag("Ground")) {
 					Debug.Log ("player move!!");
 					goal = vHit.point;
 					SpawnParticleEffect (goal);
@@ -64,8 +70,8 @@ public class moveTo : MonoBehaviour {
 				// do ray cast when touch is detected
 				//Vector2 touchPos = touch.position;
 				if (Physics.Raycast (Camera.main.ScreenPointToRay (touch.position), out hit)) {
-					Debug.Log ("hit something!");
-					if ((hit.collider.gameObject.tag == "Ground")) {
+					
+					if (hit.collider.CompareTag("Ground")) {
 						goal = hit.point;
 						SpawnParticleEffect (goal);
 						agent.destination = goal;
