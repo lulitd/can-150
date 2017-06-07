@@ -19,6 +19,7 @@ public class moveTo : MonoBehaviour {
 	//animator controller
 	public Animator ani;
 
+
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
 		mainCam = Camera.main;
@@ -51,6 +52,9 @@ public class moveTo : MonoBehaviour {
 					SpawnParticleEffect (goal);
 
 					agent.destination = goal;
+					ani.SetBool ("isWalking", true);
+				} else {
+					ani.SetBool ("isWalking", false);
 				}
 			}
 		}
@@ -72,7 +76,9 @@ public class moveTo : MonoBehaviour {
 						goal = hit.point;
 						SpawnParticleEffect (goal);
 						agent.destination = goal;
-
+						ani.SetBool ("isWalking", true);
+					}else {
+						ani.SetBool ("isWalking", false);
 					}
 				}
 
