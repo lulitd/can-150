@@ -35,6 +35,9 @@ public class moveTo : MonoBehaviour {
 		TouchMove();
 		#endif
 		//MouseMove ();
+		if(!agent.hasPath){
+			ani.SetBool ("isWalking", false);
+		}
 	}
 	void MouseMove(){
 		LeftClick = Input.GetMouseButtonDown (0);
