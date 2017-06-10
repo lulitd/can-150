@@ -15,6 +15,7 @@ public class SummonManager : MonoBehaviour {
 	public GameObject SummonButton;
 	public GameObject okButton;
 
+
 	// Use this for initialization
 	void Start () {
 		if (SummonList.Count < 1) {

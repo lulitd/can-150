@@ -16,6 +16,10 @@ public class moveTo : MonoBehaviour {
 	public GameObject particle;
 	public float particleLifeTime;
 
+	//animator controller
+	public Animator ani;
+
+
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
 		mainCam = Camera.main;
@@ -31,6 +35,9 @@ public class moveTo : MonoBehaviour {
 		TouchMove();
 		#endif
 		//MouseMove ();
+		if(!agent.hasPath){
+			ani.SetBool ("isWalking", false);
+		}
 	}
 	void MouseMove(){
 		LeftClick = Input.GetMouseButtonDown (0);
@@ -54,6 +61,9 @@ public class moveTo : MonoBehaviour {
 					SpawnParticleEffect (goal);
 
 					agent.destination = goal;
+					ani.SetBool ("isWalking", true);
+				} else {
+					ani.SetBool ("isWalking", false);
 				}
 			}
 		}
@@ -75,7 +85,9 @@ public class moveTo : MonoBehaviour {
 						goal = hit.point;
 						SpawnParticleEffect (goal);
 						agent.destination = goal;
-
+						ani.SetBool ("isWalking", true);
+					}else {
+						ani.SetBool ("isWalking", false);
 					}
 				}
 
