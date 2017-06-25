@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class moveTo : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class moveTo : MonoBehaviour {
 	//animator controller
 	public Animator ani;
 
+	//event system
+	public EventSystem eventSystem;
 
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
@@ -51,19 +54,23 @@ public class moveTo : MonoBehaviour {
 			//do raycast
 			RaycastHit vHit;
 			Ray vRay = mainCam.ScreenPointToRay (mousePos);
-
-			if (Physics.Raycast (vRay, out vHit)) {
+			if (eventSystem.IsPointerOverGameObject ()) {
+				// No code needed here your UI elements will receive this hit and NOT do raycast info in the else below
+				return;
+			} else {
+				if (Physics.Raycast (vRay, out vHit)) {
                 
-                // use compare tag. more optimised than ==
-                if (vHit.collider.CompareTag("Ground")) {
-					Debug.Log ("player move!!");
-					goal = vHit.point;
-					SpawnParticleEffect (goal);
+					// use compare tag. more optimised than ==
+					if (vHit.collider.CompareTag ("Ground")) {
+						Debug.Log ("player move!!");
+						goal = vHit.point;
+						SpawnParticleEffect (goal);
 
-					agent.destination = goal;
-					ani.SetBool ("isWalking", true);
-				} else {
-					ani.SetBool ("isWalking", false);
+						agent.destination = goal;
+						ani.SetBool ("isWalking", true);
+					} else {
+						ani.SetBool ("isWalking", false);
+					}
 				}
 			}
 		}
@@ -79,15 +86,20 @@ public class moveTo : MonoBehaviour {
 			if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved) {
 				// do ray cast when touch is detected
 				//Vector2 touchPos = touch.position;
-				if (Physics.Raycast (Camera.main.ScreenPointToRay (touch.position), out hit)) {
+				if (EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId)) {
+					// No code needed here your UI elements will receive this hit and NOT do raycast info in the else below
+					return;
+				} else {
+					if (Physics.Raycast (Camera.main.ScreenPointToRay (touch.position), out hit)) {
 					
-					if (hit.collider.CompareTag("Ground")) {
-						goal = hit.point;
-						SpawnParticleEffect (goal);
-						agent.destination = goal;
-						ani.SetBool ("isWalking", true);
-					}else {
-						ani.SetBool ("isWalking", false);
+						if (hit.collider.CompareTag ("Ground")) {
+							goal = hit.point;
+							SpawnParticleEffect (goal);
+							agent.destination = goal;
+							ani.SetBool ("isWalking", true);
+						} else {
+							ani.SetBool ("isWalking", false);
+						}
 					}
 				}
 
