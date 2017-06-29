@@ -1,4 +1,6 @@
-﻿Shader "Custom/DepthGrayscale" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/DepthGrayscale" {
 	SubShader{
 		Tags{ "RenderType" = "Opaque" }
 
@@ -18,7 +20,7 @@
 	//Vertex Shader
 	v2f vert(appdata_base v) {
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 		o.scrPos = ComputeScreenPos(o.pos);
 
 		//#if defined(UNITY_UV_STARTS_AT_TOP)

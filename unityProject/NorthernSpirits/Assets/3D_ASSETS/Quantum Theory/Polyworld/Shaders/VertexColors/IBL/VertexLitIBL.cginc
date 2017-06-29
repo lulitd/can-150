@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Upgrade NOTE: commented out 'float4 unity_LightmapST', a built-in variable
@@ -39,7 +41,7 @@
 	
 	void vert(vertexInput v, out vertex2Fragment o){
 		UNITY_INITIALIZE_OUTPUT(vertex2Fragment,o);
-		o.position = mul (UNITY_MATRIX_MVP, v.vertex);
+		o.position = UnityObjectToClipPos (v.vertex);
 		
 		#ifdef QT_REFLECTION
 		float3 viewDir = -ObjSpaceViewDir(v.vertex);
