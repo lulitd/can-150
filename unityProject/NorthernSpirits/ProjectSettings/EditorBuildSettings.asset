@@ -5,13 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/TestScenes/TestScene_Movement.unity
   - enabled: 1
     path: Assets/Scenes/MainScenes/OpenningMenu.unity
+    guid: f791596f609e8480da8f772c789b2fd8
   - enabled: 1
     path: Assets/Scenes/TestScenes/MenuScene.unity
+    guid: 0518c0c7abe73314fa61bc735cf38d26
   - enabled: 1
     path: Assets/Scenes/MainScenes/QUEBEC.unity
-  - enabled: 0
-    path: Assets/Scenes/Cave.unity
+    guid: 9b67f3b2ee4e5384595d086b5920c34a
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/NUNAVUT.unity
+    guid: 146d4ea0c501f4cb5a2f5f0af6b7bca4

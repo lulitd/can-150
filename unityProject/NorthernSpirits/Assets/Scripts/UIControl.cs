@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIControl : MonoBehaviour {
 	//this class handles ui interactions
@@ -26,6 +27,15 @@ public class UIControl : MonoBehaviour {
 		InventoryPanel.SetActive (false);
 		bagIcon.SetActive (true);
 	}
+
+	public void GoToTitle(){
+		SceneManager.LoadScene ((int)Scenes.OpenningMenu);
+	}
+
+	public void GoToMap(){
+		SceneManager.LoadScene ((int)Scenes.MenuScene);
+	}
+
 
 	void Update(){
 		//need a function to check and show collected gems

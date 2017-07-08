@@ -46,6 +46,7 @@ public static class SceneListCheck
 	}
 	
 	#if UNITY_EDITOR
+	[MenuItem("Tools/Generate scene lists")]
 	public static void Generate()
     {
 		//get the path of the generator
