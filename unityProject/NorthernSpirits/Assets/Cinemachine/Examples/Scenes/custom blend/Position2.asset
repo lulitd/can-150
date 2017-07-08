@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: -264415343, guid: 7c9da65c57324a64ca6cc78d5ecc736e, type: 3}
   m_Name: Position2
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 15, z: -50}
-  m_XDampening: 1
-  m_YDampening: 1
-  m_ZDampening: 1
-  m_TransposerOffsetMode: 1
+  m_TrackedObjectOffset: {x: 0, y: 10, z: 0}
+  m_XDampening: 0
+  m_YDampening: 0
+  m_ZDampening: 0
+  m_TransposerOffsetMode: 0

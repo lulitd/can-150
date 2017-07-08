@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: -867238956, guid: 7c9da65c57324a64ca6cc78d5ecc736e, type: 3}
   m_Name: Composer_CM_1
   m_EditorClassIdentifier: 
-  TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  TrackedObjectOffset: {x: 2.87, y: 6.61, z: -1.74}
   m_HorizontalSoftDampening: 0
   m_VerticalSoftDampening: 0
   m_SoftGuideScreenPercents: {x: 0.494, y: 0.601, z: 0.5, w: 0.601}
