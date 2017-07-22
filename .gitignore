@@ -29,6 +29,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-_site/
-.sass-cache/
-.jekyll-metadata
+
