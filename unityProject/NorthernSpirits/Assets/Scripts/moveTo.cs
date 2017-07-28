@@ -26,7 +26,10 @@ public class moveTo : MonoBehaviour {
 	void Start(){
 		agent = GetComponent<NavMeshAgent>();
 		mainCam = Camera.main;
-	}
+
+        if (eventSystem == null) eventSystem = GameObject.FindObjectOfType<EventSystem>();
+
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -48,7 +51,6 @@ public class moveTo : MonoBehaviour {
 
 
         if (LeftClick) {
-
 
             mousePos = Input.mousePosition;
 			//do raycast

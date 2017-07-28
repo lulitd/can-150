@@ -53,8 +53,10 @@ public class SummonManager : MonoBehaviour {
 
 	public void AskSummonQuestion(){
 		UI.SetActive (true);
-		//check if the current region can summon spirit
+        //check if the current region can summon spirit
+        if (MapManager.instance == null) return; 
 		int gemNum = MapManager.instance.getNumberOfGemsCollected(cRegion);
+        
 		if (gemNum == _MaxGemNum) {
 			GameObject sp = getSpirit (cRegion);
 			SummonQ.text = "Would you like to summon " + sp.name + " from " + cRegion.ToString () + "?";
